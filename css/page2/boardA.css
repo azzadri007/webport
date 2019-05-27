@@ -19,8 +19,9 @@ body {
 
 #partI{
   transition: 1s;
-  animation: move 10s steps(10) infinite alternate;
+
 }
+
 #clickbox{
   position: absolute;
   background-color: black;
@@ -31,12 +32,24 @@ body {
   top: 90%;
 }
 
-#clickbox:active~ #pageI{
+#title{
 
-  animation: slide 1s ease-out;
+visibility: hidden;
+  font-size: 37.5pt;
 
+  top: 29.3%;
+  left: 37.1%;
+  position: fixed;
 
 }
+
+#clickbox:hover{
+  animation: move 10s steps(10) infinite alternate;
+  animation: slide 1s ease-out;
+
+}
+
+
 
 @keyframes slide{
     0%{

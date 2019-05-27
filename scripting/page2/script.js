@@ -18,6 +18,11 @@ var TxtType = function(el, toRotate, period) {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
           if((this.txt.length) >= 16){
 
+            var concat = document.getElementById("concatinate");
+            var title = document.getElementById("title");
+            setTimeout(function(){concat.style.display = "none";
+          title.style.visibility = "visible";}, 1000);
+
             return;
           }
         }
@@ -45,7 +50,7 @@ var TxtType = function(el, toRotate, period) {
 
     };
 
-    window.onload = function() {
+    window.onload = function start() {
 
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
@@ -63,5 +68,13 @@ var TxtType = function(el, toRotate, period) {
         css.type = "boardA1/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff; font-family: serif;}";
         document.body.appendChild(css);
+
+
         return;
     };
+
+/*
+window.onload = function fadeOut(){
+
+
+}                                    */
