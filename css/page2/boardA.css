@@ -26,37 +26,18 @@ body {
   position: absolute;
   background-color: black;
   color: black;
-  width: 3000px;
+  width: 300px;
   padding-top: 90%;
   height: 5%;
   top: 90%;
+  left: 0;
 }
 
 #title{
-
-visibility: hidden;
+  visibility: hidden;
   font-size: 37.5pt;
-
   top: 29.3%;
   left: 37.1%;
-  position: fixed;
-
-}
-
-#clickbox:hover{
-  animation: move 10s steps(10) infinite alternate;
-  animation: slide 1s ease-out;
-
-}
-
-
-
-@keyframes slide{
-    0%{
-      transform: translateY(0);
-    }
-    100%{
-      transform: translateY(-300px);
-    }
+  position: absolute;
 
 }

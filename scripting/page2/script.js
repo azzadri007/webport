@@ -73,8 +73,19 @@ var TxtType = function(el, toRotate, period) {
         return;
     };
 
-/*
-window.onload = function fadeOut(){
 
+function onclickUp(){
+  var title = document.getElementById("title");
+  var posY = title.style.top;
+  var i = 0;
+  var id = setInterval(move, 10);
+  function move(){
+    if(posY == 0){
+      clearInterval(id);
+    } else{
+      posY = posY - 0.1;
+      title.style.top = posY + "px";
+    }
+  }
 
-}                                    */
+}
