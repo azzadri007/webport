@@ -17,11 +17,11 @@ var TxtType = function(el, toRotate, period) {
         } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
           if((this.txt.length) >= 16){
-
+/*
             var concat = document.getElementById("concatinate");
             var title = document.getElementById("title");
             setTimeout(function(){concat.style.display = "none";
-          title.style.visibility = "visible";}, 1000);
+          title.style.visibility = "visible";}, 1000); */
 
             return;
           }
@@ -41,7 +41,7 @@ var TxtType = function(el, toRotate, period) {
         } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 900;  //delta is the time it take for the message o switch after erasing it
+        delta = 900;  //900 delta is the time it take for the message o switch after erasing it
         }
 
         setTimeout(function() {
@@ -72,20 +72,3 @@ var TxtType = function(el, toRotate, period) {
 
         return;
     };
-
-
-function onclickUp(){
-  var title = document.getElementById("title");
-  var posY = title.style.top;
-  var i = 0;
-  var id = setInterval(move, 10);
-  function move(){
-    if(posY == 0){
-      clearInterval(id);
-    } else{
-      posY = posY - 0.1;
-      title.style.top = posY + "px";
-    }
-  }
-
-}

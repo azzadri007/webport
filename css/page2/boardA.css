@@ -19,18 +19,29 @@ body {
 
 #partI{
   transition: 1s;
-
+  visibility: visible;
+}
+#partII{
+  transition: 1s;
+  visibility: hidden;
 }
 
 #clickbox{
   position: absolute;
   background-color: black;
   color: black;
-  width: 300px;
-  padding-top: 90%;
-  height: 5%;
-  top: 90%;
-  left: 0;
+  width: 100px;
+  height: 100px;
+  bottom: 0%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+#clickbox:hover ~ #partI{
+
+  -webkit-animation: up 2s linear infinite;
+  -moz-animation: up 2s linear infinite;
+  -o-animation: up 2s linear infinite;
 }
 
 #title{
@@ -39,5 +50,17 @@ body {
   top: 29.3%;
   left: 37.1%;
   position: absolute;
+}
 
+@-webkit-keyframes up {
+  0% {margin-bottom: 0px;}
+  100% {margin-bottom: 2000px;}
+}
+@-moz-keyframes up {
+  0% {margin-bottom: 0px;}
+  100% {margin-bottom: 2000px;}
+}
+@-o-keyframes up {
+  0% {margin-bottom: 0px;}
+  100% {margin-bottom: 2000px;}
 }
