@@ -16,7 +16,7 @@ var TxtType = function(el, toRotate, period) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
-          if((this.txt.length) >= 16){
+          if((this.txt.length) >= 23){
 /*
             var concat = document.getElementById("concatinate");
             var title = document.getElementById("title");
