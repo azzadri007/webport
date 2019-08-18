@@ -38,10 +38,8 @@ body{
   margin-left: -102px;
   clip-path: polygon(50px 0px, 150px 0px, 200px 87px, 150px 174px, 50px 174px, 0px 87px);
   background: #F2F2F2;
-  height: 174px;
-  width: 200px;
-
-  z-index: 2;
+  height: 348px;
+  width: 400px;
 }
 
 
