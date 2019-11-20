@@ -42,8 +42,21 @@ function returnHome(){
 
         }
       }else{
-        document.body.scrollTop = 0;
-        coin = 1;
+
+// This scrolling back to the top was taken from https://stackoverflow.com/questions/15935318/smooth-scroll-to-top   //
+
+// click return and it will slowly scroll up. Modifying "window.scrollTo(0, c - c / 400);"
+// the "400" is a hardcoded value and if you increse it it will slow down, visa-versa
+        const scrollToTop = () => {
+          const c = document.documentElement.scrollTop || document.body.scrollTop;
+          if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 400);
+          }
+        };
+        scrollToTop();
+//here I added a timeout so that it can get to the top, momentarily rest then exit
+        setTimeout(function(){coin = 1;}, 1000)
 
       }
 
