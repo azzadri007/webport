@@ -15,25 +15,60 @@ function returnHome(){
   var i = 0;
   var j = 0.05;
   var init_op = 0;
+  var coin = 0;
+
+  var top = document.body.scrollTop;
+  document.body.style.overflow = "hidden";
+  //document.body.style.position = "fixed";
 
   let loop = setInterval(function(){
-      if((i > 400)&&(j == 1)){
-        window.location.href = "hello.html";
-        clearInterval(loop);
-        return;
+
+//If you're at the top of the page ... OR ...
+      if(top == 0){
+        if((i > 100)&&(j == 1)){
+          window.location.href = "hello.html";
+          clearInterval(loop);
+          return;
+        }else{
+          i = i + 1;
+          cover.style.top = position+i+"%";
+          setTimeout(
+            function(){if(j < 1){
+              j = j + 0.01;
+            }else{
+              j = 1;
+            }}, 50);
+          hex.style.opacity = j;
+
+        }
       }else{
-        i = i + 1;
-        cover.style.top = position+i+"%";
-        setTimeout(
-          function(){if(j < 1){
-            j = j + 0.01;
-          }else{
-            j = 1;
-          }}, 50);
-        hex.style.opacity = j;
+        document.body.scrollTop = 0;
+        coin = 1;
 
       }
-    }, 20);
+
+//If coin is given 1 - due to you being at the top of the page, you can then
+// start scrolling to 'blank' the page
+      if(coin == 1){
+        if((i > 100)&&(j == 1)){
+          window.location.href = "hello.html";
+          clearInterval(loop);
+          return;
+        }else{
+          i = i + 1;
+          cover.style.top = position+i+"%";
+          setTimeout(
+            function(){if(j < 1){
+              j = j + 0.01;
+            }else{
+              j = 1;
+            }}, 50);
+          hex.style.opacity = j;
+
+        }
+      }
+
+  }, 20);
 
 
 
