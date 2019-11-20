@@ -51,19 +51,24 @@ body {
   -o-animation: hex 4s;
   -ms-animation: hex 4s;
 }
+
+/* Gif block but NOT using it for PAGE1 */
+/*
 #giffer{
   display: block;
   position: absolute;
-  background-image: url("backup.gif");
-  background-repeat: repeat;
+  background-image: url("giphy.gif");
+  background-size: 100%;
+*/ /*  background-repeat: no-repeat; */ /*
   width: 100%;
   height: 97%;
   top: 1.5%;
   left: 0;
   overflow-x: hidden;
-}
+} */
+
 #back_w{
-  overflow-x: scroll;
+  overflow-x: hidden;
   position: absolute;
   background-color: #FFE5EE; /* seashell white/pink */
   width: 90%;
@@ -81,12 +86,12 @@ body {
   position: absolute;
   background-color:  #FFFAFA; /* snow white code */
   width: 98%;
-  height: 99%;
+  height: 100%;
   left: 1%;
   top: 0;
 }
 /*
-#inner_butt{  this is a bar that makes it look like it had padding on the bottom 
+#inner_butt{  this is a bar that makes it look like it had padding on the bottom
   position: fixed;
   background-color:  #ff9eb5;
   width: 100%;
