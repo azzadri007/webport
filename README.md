@@ -11,4 +11,4 @@ Sources:
 
 Adrian Azzarelli
 
-University of Southampton, Electronic and Electrical Engineering (BEng/MEng)
+University of Southampton, Electronic and Electrical Engineering (MEng)
