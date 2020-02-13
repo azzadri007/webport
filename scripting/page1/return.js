@@ -12,10 +12,10 @@ function returnHome(){
   var cover = document.getElementById("cover");
   var hex = document.getElementById("Hexaco");
   var position = -400; //initial position is -300% as it is above page
-  var i = 0;
-  var j = 0.05;
+  var i = 0; //position changer
+  var j = 0.05; //unsure
   var init_op = 0;
-  var coin = 0;
+  var coin = 0; //TopPage coin
 
   var top = document.body.scrollTop;
   document.body.style.overflow = "hidden";

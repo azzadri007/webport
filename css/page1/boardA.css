@@ -134,12 +134,12 @@ body {
   background-color: white;
 }
 
-/* This is the wrap for the typewrite */
+/* TITLE:  This is the wrap for the typewrite */
 a{
-  width: 500px;
+  width: 800px;
   position: fixed;
   top: 45%;
-  margin-left: -250px;
+  margin-left: -400px;
 }
 /* 8************** */
 

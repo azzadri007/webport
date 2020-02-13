@@ -1,19 +1,7 @@
 
-body{60%
+body{
   background-color: #aadd77;
 
-}
-
-#backG{
-  position: fixed;
-  top:0;
-  bottom: 100%;
-  height: 100%;
-  width: 900px;
-  background-color: darkgreen;
-  left:50%;
-  margin-left: -450px;
-  z-index: 0;
 }
 
 .hex_back{
@@ -36,32 +24,67 @@ body{60%
 }
 
 .title{
-  color: #6fb22c;
   font-size: 80;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-style: normal;
   position: sticky;
   top: 20%;
   text-align: center;
+}
 
+#BARS{
+  position: fixed;
+  width: 80%;
+  height:200%;
+  left: 10%;
+  top: 0;
 
 }
+
+.bar_L{
+  position: absolute;
+  background: white;
+  width: 10%;
+  height: 100%;
+
+  top: -100%;
+  left: 0;
+  -webkit-animation: slide 4s;
+  -moz-animation: slide 4s;
+  -o-animation: slide 4s;
+  -ms-animation: slide 4s;
+}
+.bar_R{
+  position: absolute;
+  background: white;
+  width: 10%;
+  height: 100%;
+
+  top: -100%;
+  right: 0;
+
+  -webkit-animation: slide 4s;
+  -moz-animation: slide 4s;
+  -o-animation: slide 4s;
+  -ms-animation: slide 4s;
+}
+
 
 
 /*  KEY FRAMES  */
-@-webkit-keyframes hex {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+@-webkit-keyframes slide {
+  0% {top: -100%;}
+  100% {top: 0;}
 }
-@-moz-keyframes hex {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+@-moz-keyframes slide {
+  0% {top: -100%;}
+  100% {top: 0;}
 }
-@-o-keyframes hex {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+@-o-keyframes slide {
+  0% {top: -100%;}
+  100% {top: 0;}
 }
-@-ms-keyframes hex {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+@-ms-keyframes slide {
+  0% {top: -100%;}
+  100% {top: 0;}
 }
