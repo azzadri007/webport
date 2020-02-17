@@ -1,11 +1,11 @@
 
 body{
   background-color: #aadd77;
-
+  overflow: hidden;
 }
 
 .hex_back{
-  z-index: 1;
+  z-index: 0;
   outline: 0;
   border: 0;
   position: fixed;
@@ -24,12 +24,15 @@ body{
 }
 
 .title{
+  position: absolute;
+  width: 100%;
+  display: block;
   font-size: 80;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-style: normal;
-  position: sticky;
   top: 20%;
   text-align: center;
+  z-index: 1;
 }
 
 #BARS{
@@ -42,50 +45,78 @@ body{
 
 }
 
-.bar_L{
-  position: absolute;
-  background: white;
-  width: 30%;
-  height: 100%;
-
-  top: -100%;
-  left: 0;
-  -webkit-animation: slide 4s;
-  -moz-animation: slide 4s;
-  -o-animation: slide 4s;
-  -ms-animation: slide 4s;
+/* Describing Right Pannels */
+/* slide1 = left for R1 -- slide2 = down for R2 -- slide3 = up for L1 */
+.bar_R1{
+  position: absolute;background: white;
+  width: 15%;height: 48%;top: 1%;left: 1%;
+  -webkit-animation: slide1 1s;-moz-animation: slide1 1s;-o-animation: slide1 1s;-ms-animation: slide1 1s;
 }
-.bar_R{
-  position: absolute;
-  background: white;
-  width: 30%;
-  height: 100%;
-
-  top: -100%;
-  right: 0;
-
-  -webkit-animation: slide 4s;
-  -moz-animation: slide 4s;
-  -o-animation: slide 4s;
-  -ms-animation: slide 4s;
+.bar_R2{
+  position: absolute;background: white;
+  width: 15%;height: 48%;top: 1%;left: 18%;
+  -webkit-animation: slide2 1s;-moz-animation: slide2 1s;-o-animation: slide2 1s;-ms-animation: slide2 1s;
 }
-
-
+.bar_L1{
+  position: absolute;background: white;
+  width: 15%;height: 48%;top: 1%;right: 18%;
+  -webkit-animation: slide3 1s;-moz-animation: slide3 1s;-o-animation: slide3 1s;-ms-animation: slide3 1s;
+}
+.bar_L2{
+  position: absolute;background: white;
+  width: 15%;height: 48%;top: 1%;right: 1%;
+  -webkit-animation: slide4 1s;-moz-animation: slide4 1s;-o-animation: slide4 1s;-ms-animation: slide4 1s;
+}
 
 /*  KEY FRAMES  */
-@-webkit-keyframes slide {
-  0% {top: -100%;}
-  100% {top: 0;}
-}
-@-moz-keyframes slide {
-  0% {top: -100%;}
-  100% {top: 0;}
-}
-@-o-keyframes slide {
-  0% {top: -100%;}
-  100% {top: 0;}
-}
-@-ms-keyframes slide {
-  0% {top: -100%;}
-  100% {top: 0;}
-}
+@-webkit-keyframes slide1 {
+  0% {left: -15%;}
+  100% {left: 1%;}}
+@-moz-keyframes slide1 {
+  0% {left: -15%;}
+  100% {left: 1%;}}
+@-o-keyframes slide1 {
+  0% {left: -15%;}
+  100% {left: 1%;}}
+@-ms-keyframes slide1 {
+  0% {left: -15%;}
+  100% {left: 1%;}}
+
+  @-webkit-keyframes slide2 {
+    0% {top: -49%;}
+    100% {top: 1%;}}
+  @-moz-keyframes slide2 {
+    0% {top: -49%;}
+    100% {top: 1%;}}
+  @-o-keyframes slide2 {
+    0% {top: -49%;}
+    100% {top: 1%;}}
+  @-ms-keyframes slide2 {
+    0% {top: -49%;}
+    100% {top: 1%;}}
+
+    @-webkit-keyframes slide3{
+      0% {top: 101%;}
+      100% {top: 1%;}}
+    @-moz-keyframes slide3{
+      0% {top: 101%;}
+      100% {top: 1%;}}
+    @-o-keyframes slide3{
+      0% {top: 101%;}
+      100% {top: 1%;}}
+    @-ms-keyframes slide3{
+      0% {top: 101%;}
+      100% {top: 1%;}}
+
+      @-webkit-keyframes slide4{
+        0% {right: -15%;}
+        100% {right: 1%;}}
+      @-moz-keyframes slide4{
+        0% {right: -15%;}
+        100% {right: 1%;}}
+      @-o-keyframes slide4{
+        0% {right: -15%;}
+        100% {right: 1%;}}
+      @-ms-keyframes slide4{
+        0% {right: -15%;}
+        100% {right: 1%;}}
