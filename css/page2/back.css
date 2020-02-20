@@ -35,6 +35,7 @@ body{
   top: 10px;
   left: -10px;
   position: fixed;
+  -webkit-animation: back 2s;-moz-animation: back 2s;-o-animation: back 2s;-ms-animation: back 2s;
 }
 #BARS{
   position: fixed;
@@ -166,3 +167,16 @@ body{
   @-ms-keyframes title{
     0% {top: -25%;}
     100% {top: 2%;}}
+
+    @-webkit-keyframes back{
+      0% {left: -90px;}
+      100% {left: -10;}}
+    @-moz-keyframes back{
+      0% {left: -90px;}
+      100% {left: -10;}}
+    @-o-keyframes back{
+      0% {left: -90px;}
+      100% {left: -10;}}
+    @-ms-keyframes back{
+      0% {left: -90px;}
+      100% {left: -10;}}
