@@ -113,21 +113,25 @@ body {
 }
 
 #back_space{
+  z-index: 100;
   background-color: #ff9eb5;
-  background-image: url("return.png");
+  opacity: 0.3;
+  background-image: url("arrow.png");
+  transform: scaleX(-1);
   background-repeat: no-repeat;
-  background-position: 9px 3px;
-  opacity: 0.8;
+  background-position: 14px 9px;
   border: 0;
   outline: 0;
   cursor: pointer;
   background-size: 30px;
-  width: 55px;
-  height: 35px;
-  top: 14px;
-  left: 10px;
+  width: 70px;
+  height: 30px;
+  top: 10px;
+  left: -10px;
+  display: block;
   position: fixed;
-  border-radius: 50px;
+  -webkit-animation: back 2s;-moz-animation: back 2s;-o-animation: back 2s;-ms-animation: back 2s;
+
 }
 
 #back_space:hover{
@@ -319,3 +323,17 @@ h4{
   height: 348px;
   width: 400px;
 }
+
+
+@-webkit-keyframes back{
+  0% {left: -90px;}
+  100% {left: -10;}}
+@-moz-keyframes back{
+  0% {left: -90px;}
+  100% {left: -10;}}
+@-o-keyframes back{
+  0% {left: -90px;}
+  100% {left: -10;}}
+@-ms-keyframes back{
+  0% {left: -90px;}
+  100% {left: -10;}}

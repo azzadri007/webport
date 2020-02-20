@@ -11,6 +11,7 @@ function returnHome(){
 
   var cover = document.getElementById("cover");
   var hex = document.getElementById("Hexaco");
+  var bck = document.getElementById("back_space");
   var position = -400; //initial position is -300% as it is above page
   var i = 0; //position changer
   var j = 0.05; //unsure
@@ -22,6 +23,7 @@ function returnHome(){
   //document.body.style.position = "fixed";
 
   let loop = setInterval(function(){
+    bck.style.display = "none";
 
 //If you're at the top of the page ... OR ...
       if(top == 0){
