@@ -7,20 +7,33 @@
 
 
 <body>
+<!-- script src="scripting/page2/return.js"></script -->
+
 
   <h1 class="title">PROJECTS</h1>
 
-  <div class="hex_back"></div>
-  
   <div id="back_Col"></div>
+
+  <button id="back_space" onclick="home()"></button>
+
+  <!--  Photo Pannels  -->
   <div id="BARS">
     <dic id="pan_R">
-      <div class="bar_R1"></div>
+      <div class="bar_R1"></div> <!-- Right side pannel backs -->
       <div class="bar_R2"></div>
-      <div class="bar_L1"></div>
+
+      <div class="bar_ML"></div> <!--Mid Left pannel-->
+      <div class="bar_MR"></div> <!--Mid right panne l-->
+
+      <div class="bar_L1"></div> <!--Left side pannel backs-->
       <div class="bar_L2"></div>
     </div>
   </div>
 
+  <script><!-- Return Home -->
+  function home (){
+    window.location.href = "hello.html";
+  }
+  </script>
 </body>
 </html>

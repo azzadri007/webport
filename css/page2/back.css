@@ -4,37 +4,38 @@ body{
   overflow: hidden;
 }
 
-.hex_back{
-  z-index: 0;
-  outline: 0;
-  border: 0;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -174px;
-  margin-left: -200px;
-  clip-path: polygon(100px 0px, 300px 0px, 400px 174px, 300px 348px, 100px 348px, 0px 174px);
-  background: #F2F2F2;
-  height: 348px;
-  width: 400px;
-  -webkit-animation: hex 4s;
-  -moz-animation: hex 4s;
-  -o-animation: hex 4s;
-  -ms-animation: hex 4s;
-}
-
 .title{
-  position: absolute;
+  position: fixed;
+  height:20%;
   width: 100%;
   display: block;
-  font-size: 80;
+  font-size: 70;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-style: normal;
-  top: 20%;
+  top: 2%;
   text-align: center;
-  z-index: 1;
+  z-index: 100;
+  -webkit-animation: title 2s;-moz-animation: title 2s;-o-animation: title 2s;-ms-animation: title 2s;
 }
 
+#back_space{
+  z-index: 100;
+  background-color: black;
+  opacity: 0.6;
+  background-image: url("arrow.png");
+  transform: scaleX(-1);
+  background-repeat: no-repeat;
+  background-position: 14px 9px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-size: 30px;
+  width: 70px;
+  height: 30px;
+  top: 10px;
+  left: -10px;
+  position: fixed;
+}
 #BARS{
   position: fixed;
   opacity: 0.3;
@@ -42,32 +43,37 @@ body{
   height:200%;
   left: 0;
   top: 0;
-
 }
-
 /* Describing Right Pannels */
 /* slide1 = left for R1 -- slide2 = down for R2 -- slide3 = up for L1 */
 .bar_R1{
   position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;left: 1%;
-  -webkit-animation: slide1 1s;-moz-animation: slide1 1s;-o-animation: slide1 1s;-ms-animation: slide1 1s;
+  width: 15%;height: 46%;top: 50px;left: 1%;
+  -webkit-animation: slide1 2s;-moz-animation: slide1 2s;-o-animation: slide1 2s;-ms-animation: slide1 2s;
 }
 .bar_R2{
   position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;left: 18%;
-  -webkit-animation: slide2 1s;-moz-animation: slide2 1s;-o-animation: slide2 1s;-ms-animation: slide2 1s;
+  width: 15%;height: 48%;top: 1%;left: 17%;
+  -webkit-animation: slide2 2s;-moz-animation: slide2 2s;-o-animation: slide2 2s;-ms-animation: slide2 2s;
 }
 .bar_L1{
   position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;right: 18%;
-  -webkit-animation: slide3 1s;-moz-animation: slide3 1s;-o-animation: slide3 1s;-ms-animation: slide3 1s;
+  width: 15%;height: 48%;top: 1%;right: 17%;
+  -webkit-animation: slide3 2s;-moz-animation: slide3 2s;-o-animation: slide3 2s;-ms-animation: slide3 2s;
 }
 .bar_L2{
   position: absolute;background: white;
   width: 15%;height: 48%;top: 1%;right: 1%;
-  -webkit-animation: slide4 1s;-moz-animation: slide4 1s;-o-animation: slide4 1s;-ms-animation: slide4 1s;
+  -webkit-animation: slide4 2s;-moz-animation: slide4 2s;-o-animation: slide4 2s;-ms-animation: slide4 2s;
+}.bar_ML{
+  position: absolute;background: white;
+  width: 15%;height: 37%;top: 12%;left: 34%;
+  -webkit-animation: slide5 2s;-moz-animation: slide5 2s;-o-animation: slide5 2s;-ms-animation: slide5 2s;
+}.bar_MR{
+  position: absolute;background: white;
+  width: 15%;height: 37%;top: 12%;right :34%;
+  -webkit-animation: slide6 2.2s;-moz-animation: slide6 2.2s;-o-animation: slide6 2.2s;-ms-animation: slide6 2.2s;
 }
-
 /*  KEY FRAMES  */
 @-webkit-keyframes slide1 {
   0% {left: -15%;}
@@ -120,3 +126,43 @@ body{
       @-ms-keyframes slide4{
         0% {right: -15%;}
         100% {right: 1%;}}
+
+
+  @-webkit-keyframes slide5{
+    0% {top: 101%;}
+    100% {top: 12%;}}
+  @-moz-keyframes slide5{
+    0% {top: 101%;}
+    100% {top: 12%;}}
+  @-o-keyframes slide5{
+    0% {top: 101%;}
+    100% {top: 12%;}}
+  @-ms-keyframes slide5{
+    0% {top: 101%;}
+    100% {top: 12%;}}
+
+  @-webkit-keyframes slide6{
+    0% {top: 110%;}
+    100% {top: 12%;}}
+  @-moz-keyframes slide6{
+    0% {top: 110%;}
+    100% {top: 12%;}}
+  @-o-keyframes slide6{
+    0% {top: 110%;}
+    100% {top: 12%;}}
+  @-ms-keyframes slide6{
+    0% {top: 110%;}
+    100% {top: 12%;}}
+
+  @-webkit-keyframes title{
+    0% {top: -25%;}
+    100% {top: 2%;}}
+  @-moz-keyframes title{
+    0% {top: -25%;}
+    100% {top: 2%;}}
+  @-o-keyframes title{
+    0% {top: -25%;}
+    100% {top: 2%;}}
+  @-ms-keyframes title{
+    0% {top: -25%;}
+    100% {top: 2%;}}
