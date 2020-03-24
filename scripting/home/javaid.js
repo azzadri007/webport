@@ -121,7 +121,7 @@ function hexA1(){
     A2.style.display = "none";
     A3.style.display = "none";
     A4.style.display = "none";}, 1800);
-    setTimeout(function(){window.location.href="pageA1.html"}, 2700);
+    setTimeout(function(){window.location.href="pageA1.html"}, 2300);
 }
 function hexA2(){
 /* #EE82EE #DA70D6 */
@@ -165,7 +165,7 @@ document.body.style.background = "#aadd77";
     A2.style.display = "none";
     A3.style.display = "none";
     A4.style.display = "none";}, 1800);
-    setTimeout(function(){window.location.href="pageA2.html"}, 2700);
+    setTimeout(function(){window.location.href="pageA2.html"}, 2300);
 }
 function hexA3(){
 /* #EE82EE #DA70D6 */
@@ -209,6 +209,8 @@ document.body.style.background = "#aec6cf";
     A2.style.display = "none";
     A3.style.display = "none";
     A4.style.display = "none";}, 1800);
+    setTimeout(function(){window.location.href="pageA3.html"}, 2300);
+
 }
 
 function hexA4(){
