@@ -5,7 +5,8 @@ body{
 }
 
 #slide_L{
-  z-index: 1;
+    z-index: 1;
+    opacity: 0.6;
     position: fixed;
     background: grey;
     display: block;
@@ -18,6 +19,7 @@ body{
 }
 #slide_R{
   z-index: 1;
+  opacity: 0.6;
   position: fixed;
   background: grey;
   display: block;
@@ -26,34 +28,7 @@ body{
   top: 20%;
   right: -50%;
   animation-timing-function: ease-in;
-  -webkit-animation: rihgty 3s;-moz-animation: righty 3s;-o-animation: righty 3s;-ms-animation: righty 3s;
-}
-
-.hex_wrap {
-  position: fixed;
-  filter: drop-shadow(10px 0px 0px black);// X ~ down
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-    z-index: 2;
-}
-
-#white_hex{
-  z-index: 2;
-  outline: 0;
-  border: 0;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  height: 348px;
-  width: 400px;
-  margin-top: -174px;
-  margin-left: -200px;
-  clip-path: polygon(100px 0px, 300px 0px, 400px 174px, 300px 348px, 100px 348px, 0px 174px);
-  background: #aec6cf;
-
-
+  -webkit-animation: righty 3s;-moz-animation: righty 3s;-o-animation: righty 3s;-ms-animation: righty 3s;
 }
 
 @-webkit-keyframes lefty{
@@ -80,3 +55,28 @@ body{
   @-ms-keyframes righty{
     0% {right: -100%;}
     100% {right: -50%;}}
+
+#cover{
+    position: absolute;
+    height: 400%;
+    width: 100%;
+    background-color: white;
+    top: -400%;
+    left: 0;
+    z-index: 100;
+}
+#Hexaco{
+  outline: 0;
+  border: 0;
+  z-index: 101;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -89px;
+  margin-left: -102px;
+  clip-path: polygon(50px 0px, 150px 0px, 200px 87px, 150px 174px, 50px 174px, 0px 87px);
+  background: #F2F2F2;
+  height: 348px;
+  width: 400px;
+}
