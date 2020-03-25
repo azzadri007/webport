@@ -62,30 +62,30 @@ opacity: 0.6;
         L1, L2, ML, MR, R2, R1 */
 .bar_L1{
   position: absolute;background: white;
-  width: 15%;height: 45%;top: 4%;left: 1%;
+  width: 15%;height: 345.6px;top: 4%;left: 50%; margin-left: -669.34px;
   -webkit-animation: slide1 2s;-moz-animation: slide1 2s;-o-animation: slide1 2s;-ms-animation: slide1 2s;
 }
 .bar_L2{
   position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;left: 17.625%;
+  width: 204.9px;height: 368.64px;top: 1%;left: 50%;margin-left: -442.58px;
   -webkit-animation: slide2 2s;-moz-animation: slide2 2s;-o-animation: slide2 2s;-ms-animation: slide2 2s;
 }
 .bar_R2{
-  position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;right: 17.625%;
+  position: absolute;background: white; overflow: hidden;
+  width: 204.9px;height: 368.64px;top: 1%;right: 17.625%;
   -webkit-animation: slide3 2s;-moz-animation: slide3 2s;-o-animation: slide3 2s;-ms-animation: slide3 2s;
 }
 .bar_R1{
   position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;right: 1%;
+  width: 204.9px;height: 368.64px;top: 1%;right: 1%;
   -webkit-animation: slide4 2s;-moz-animation: slide4 2s;-o-animation: slide4 2s;-ms-animation: slide4 2s;
 }.bar_ML{
   position: absolute;background: white;
-  width: 15%;height: 37%;top: 12%;left: 34.25%;
+  width: 204.9px;height: 284.16px;top: 12%;left: 34.25%;
   -webkit-animation: slide5 2s;-moz-animation: slide5 2s;-o-animation: slide5 2s;-ms-animation: slide5 2s;
 }.bar_MR{
   position: absolute;background: white;
-  width: 15%;height: 37%;top: 12%;right :34.25%;
+  width: 204.9px;height: 284.16;top: 12%;right :34.25%;
   -webkit-animation: slide6 2.2s;-moz-animation: slide6 2.2s;-o-animation: slide6 2.2s;-ms-animation: slide6 2.2s;
 }
 
@@ -96,9 +96,8 @@ opacity: 0.6;
     top: 5%;
     left: 5%;
 
-    background-repeat: no-repeat;
-    background-position: auto;
-    background-size: 90% 20%;
+    font-size: 8vh;
+    font-family: "Courier New", Courier, monospace;
 
 }
 /*  KEY FRAMES  */
