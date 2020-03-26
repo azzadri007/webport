@@ -7,20 +7,20 @@ body{
 .title_Box{
   position: absolute;
   opacity: 1;
-  height:20%;
-  width: 40%;
+  height:120px;
+  width: 430px;
   left: 50%;
-  margin-left: -20%;
-  top: 0;
+  margin-left: -215px;
+  top: 0px;
   margin-top: -1.7%;
-  text-align: center;
+  
   -webkit-animation: title 2.2s;-moz-animation: title 2.2s;-o-animation: title 2.2s;-ms-animation: title 2.2s;
 
 }
 .title{ /* "Projects" Page */
-opacity: 0.6;
-  color: white;
-  font-size: 14vh;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 90px;
+  text-align: center;
   font-family: "Courier New", Courier, monospace;
   z-index: 100;
 }
@@ -28,19 +28,19 @@ opacity: 0.6;
 #back_space{
   z-index: 100;
   background-color: #aadd77;
-  opacity: 0.6;
+  opacity: 0.3;
   background-image: url("arrow.png");
   transform: scaleX(-1);
   background-repeat: no-repeat;
-  background-position: 30% center;
+  background-position: 14px 9px;
   border: 0;
   outline: 0;
   cursor: pointer;
-  background-size: 40% 50%;
-  width: 5.1%;
-  height: 3.9%;
-  top: 2%;
-  left: -0.9%;
+  background-size: 30px;
+  width: 70px;
+  height: 30px;
+  top: 10px;
+  left: -10px;
   display: block;
   position: fixed;
   -webkit-animation: back 2s;-moz-animation: back 2s;-o-animation: back 2s;-ms-animation: back 2s;
@@ -50,7 +50,7 @@ opacity: 0.6;
 }
 #BARS{
   position: fixed;
-  opacity: 0.4;
+  
   width: 100%;
   height:200%;
   left: 0;
@@ -61,125 +61,186 @@ opacity: 0.6;
 /* From Left to Right
         L1, L2, ML, MR, R2, R1 */
 .bar_L1{
-  position: absolute;background: white;
-  width: 15%;height: 45%;top: 4%;left: 1%;
+  position: absolute;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 548px;top: 50px;left: 50%; margin-left: -669.34px;
   -webkit-animation: slide1 2s;-moz-animation: slide1 2s;-o-animation: slide1 2s;-ms-animation: slide1 2s;
 }
 .bar_L2{
-  position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;left: 17.625%;
-  -webkit-animation: slide2 2s;-moz-animation: slide2 2s;-o-animation: slide2 2s;-ms-animation: slide2 2s;
+  position: absolute;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 585px;top: 12px;left: 50%;margin-left: -442.58px;
+  -webkit-animation: slide2 2.6s;-moz-animation: slide2 2.6ss;-o-animation: slide2 2.6s;-ms-animation: slide2 2.6s;
 }
 .bar_R2{
-  position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;right: 17.625%;
+  position: absolute; overflow: hidden;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 585px;top: 12px; right: 50%; margin-right: -442.58px;
   -webkit-animation: slide3 2s;-moz-animation: slide3 2s;-o-animation: slide3 2s;-ms-animation: slide3 2s;
-}
-.bar_R1{
-  position: absolute;background: white;
-  width: 15%;height: 48%;top: 1%;right: 1%;
-  -webkit-animation: slide4 2s;-moz-animation: slide4 2s;-o-animation: slide4 2s;-ms-animation: slide4 2s;
+}.bar_R1{
+  position: absolute;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 585px;top: 12px;right: 50%; margin-right: -669.34px;
+  -webkit-animation: slide4 3s;-moz-animation: slide4 3s;-o-animation: slide4 3s;-ms-animation: slide4 3s;
 }.bar_ML{
-  position: absolute;background: white;
-  width: 15%;height: 37%;top: 12%;left: 34.25%;
-  -webkit-animation: slide5 2s;-moz-animation: slide5 2s;-o-animation: slide5 2s;-ms-animation: slide5 2s;
+  position: absolute;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 450px;top: 148px;left: 50%; margin-left: -215.145px;
+  -webkit-animation: slide5 1.6s;-moz-animation: slide5 1.6s;-o-animation: slide5 1.6s;-ms-animation: slide5 1.6s;
 }.bar_MR{
-  position: absolute;background: white;
-  width: 15%;height: 37%;top: 12%;right :34.25%;
+  position: absolute;background: rgba(255, 255, 255, 0.3);
+  width: 204.9px;height: 450px;top: 148px;right :50%; margin-right: -215.145px;
   -webkit-animation: slide6 2.2s;-moz-animation: slide6 2.2s;-o-animation: slide6 2.2s;-ms-animation: slide6 2.2s;
 }
 
-#D5{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 5%;
-    left: 5%;
+.bar_L1:hover{background-color: rgba(255, 255, 255, 0.5);}
+.bar_L2:hover{background-color: rgba(255, 255, 255, 0.5);}
+.bar_R1:hover{background-color: rgba(255, 255, 255, 0.5);}
+.bar_R2:hover{background-color: rgba(255, 255, 255, 0.5);}
+.bar_ML:hover{background-color: rgba(255, 255, 255, 0.5);}
+.bar_MR:hover{background-color: rgba(255, 255, 255, 0.5);}
 
-    background-repeat: no-repeat;
-    background-position: auto;
-    background-size: 90% 20%;
 
+/* D5 Project Bar -R2 */
+#D5Background{
+  z-index: 10;
+  position: absolute;
+  opacity: 1;
+  height: 565px;
+  width: 184.8px;
+  top: 10px;
+  left: 10px;
+  background-color: #EDF8E3;
+}div.D5Title{
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  top: 3%;
+  left: 0;
+  position: absolute;
+  background-color: rgba(196, 232, 160, 1);
+}.bar_R2:hover  div.D5Title{
+  background-color: #D5EEBB
+}p.D5Title{
+  z-index: 11;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -40px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /*font-family: "Courier New Bold", Courier,  monospace;*/
+}div.D5ImageOne{
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 5px, 179.8px 5px, 5px 212.525px);
+  background-image: url("code.jpg");
+  top: 23%;
+  left: 0px;
+}div.D5ImageTwo{
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 217.525px, 179.8px 10px, 179.8px 425.05px);
+  top: 23%;
+  left: 0px; 
+  background-image: url("housing.png");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: 30px 130px;
+  background-color: rgba(255,  245, 177, 1);
+
+}div.D5ImageThree{
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 222.525px, 5px 430.05px, 179.8px 430.05px);
+  background-image: url("board.jpg");
+  background-position:-15px 222px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  top: 23%;
+  left: 0px;
 }
+
 /*  KEY FRAMES  */
 @-webkit-keyframes slide1 {
-  0% {left: -15%;}
-  100% {left: 1%;}}
+  0% {left: -400px;}
+  100% {left: 50%;}}
 @-moz-keyframes slide1 {
-  0% {left: -15%;}
-  100% {left: 1%;}}
+  0% {left: -400px;}
+  100% {left: 50%;}}
 @-o-keyframes slide1 {
-  0% {left: -15%;}
-  100% {left: 1%;}}
+  0% {left: -400px;}
+  100% {left: 50%;}}
 @-ms-keyframes slide1 {
-  0% {left: -15%;}
-  100% {left: 1%;}}
+  0% {left: -400px;}
+  100% {left: 50%;}}
 
 @-webkit-keyframes slide2 {
-0% {top: -49%;}
-100% {top: 1%;}}
+  0% {top: -600px;}
+  100% {top: 12px;}}
 @-moz-keyframes slide2 {
-0% {top: -49%;}
-100% {top: 1%;}}
+  0% {top: -600px;}
+  100% {top: 12px;}}
  @-o-keyframes slide2 {
-0% {top: -49%;}
-100% {top: 1%;}}
-  @-ms-keyframes slide2 {
-0% {top: -49%;}
-100% {top: 1%;}}
+  0% {top: -600px;}
+  100% {top: 12px;}}
+@-ms-keyframes slide2 {
+  0% {top: -600px;}
+  100% {top: 12px;}}0% {top: -49%;}
+  100% {top: 1%;}}
 
 @-webkit-keyframes slide3{
   0% {top: 101%;}
-  100% {top: 1%;}}
+  100% {top: 12px;}}
 @-moz-keyframes slide3{
   0% {top: 101%;}
-  100% {top: 1%;}}
+  100% {top: 12px;}}
 @-o-keyframes slide3{
   0% {top: 101%;}
-  100% {top: 1%;}}
+  100% {top: 12px;}}
 @-ms-keyframes slide3{
   0% {top: 101%;}
-  100% {top: 1%;}}
+  100% {top: 12px;}}
 
 @-webkit-keyframes slide4{
-    0% {right: -15%;}
-    100% {right: 1%;}}
+  0% {right: -1%;}
+  100% {right: 50%;}}
 @-moz-keyframes slide4{
-    0% {right: -15%;}
-    100% {right: 1%;}}
+  0% {right: -1%;}
+  100% {right: 50%;}}
 @-o-keyframes slide4{
-    0% {right: -15%;}
-    100% {right: 1%;}}
+  0% {right: -1%;}
+  100% {right: 50%;}}
  @-ms-keyframes slide4{
-    0% {right: -15%;}
-    100% {right: 1%;}}
+  0% {right: -1%;}
+  100% {right: 50%;}}
 
+@-webkit-keyframes slide5{
+  0% {top: 101%;}
+  100% {top: 147px;}}
+@-moz-keyframes slide5{
+  0% {top: 101%;}
+  100% {top: 147px;}}
+@-o-keyframes slide5{
+  0% {top: 101%;}
+  100% {top: 147px;}}
+@-ms-keyframes slide5{
+  0% {top: 101%;}
+  100% {top: 147px;}}
 
-  @-webkit-keyframes slide5{
-    0% {top: 101%;}
-    100% {top: 12%;}}
-  @-moz-keyframes slide5{
-    0% {top: 101%;}
-    100% {top: 12%;}}
-  @-o-keyframes slide5{
-    0% {top: 101%;}
-    100% {top: 12%;}}
-  @-ms-keyframes slide5{
-    0% {top: 101%;}
-    100% {top: 12%;}}
-
-  @-webkit-keyframes slide6{
-    0% {top: 110%;}
-    100% {top: 12%;}}
-  @-moz-keyframes slide6{
-    0% {top: 110%;}
-    100% {top: 12%;}}
-  @-o-keyframes slide6{
-    0% {top: 110%;}
-    100% {top: 12%;}}
-  @-ms-keyframes slide6{
-    0% {top: 110%;}
-    100% {top: 12%;}}
+@-webkit-keyframes slide6{
+  0% {top: 110%;}
+  100% {top: 147px;}}
+@-moz-keyframes slide6{
+  0% {top: 110%;}
+  100% {top: 147px;}}
+@-o-keyframes slide6{
+  0% {top: 110%;}
+  100% {top: 147px;}}
+@-ms-keyframes slide6{
+  0% {top: 110%;}
+  100% {top: 147px;}}
 
   @-webkit-keyframes title{
     0% { margin-top: -20%;}
