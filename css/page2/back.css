@@ -18,8 +18,7 @@ body{
 
 }
 .title{ /* "Projects" Page */
-opacity: 0.6;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 90px;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
@@ -51,7 +50,7 @@ opacity: 0.6;
 }
 #BARS{
   position: fixed;
-  opacity: 0.4;
+  
   width: 100%;
   height:200%;
   left: 0;
@@ -62,45 +61,69 @@ opacity: 0.6;
 /* From Left to Right
         L1, L2, ML, MR, R2, R1 */
 .bar_L1{
-  position: absolute;background: white;
+  position: absolute;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 548px;top: 50px;left: 50%; margin-left: -669.34px;
   -webkit-animation: slide1 2s;-moz-animation: slide1 2s;-o-animation: slide1 2s;-ms-animation: slide1 2s;
 }
 .bar_L2{
-  position: absolute;background: white;
+  position: absolute;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 585px;top: 12px;left: 50%;margin-left: -442.58px;
   -webkit-animation: slide2 2.6s;-moz-animation: slide2 2.6ss;-o-animation: slide2 2.6s;-ms-animation: slide2 2.6s;
 }
 .bar_R2{
-  position: absolute;background: white; overflow: hidden;
+  position: absolute; overflow: hidden;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 585px;top: 12px; right: 50%; margin-right: -442.58px;
   -webkit-animation: slide3 2s;-moz-animation: slide3 2s;-o-animation: slide3 2s;-ms-animation: slide3 2s;
 }
 .bar_R1{
-  position: absolute;background: white;
+  position: absolute;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 585px;top: 12px;right: 50%; margin-right: -669.34px;
   -webkit-animation: slide4 3s;-moz-animation: slide4 3s;-o-animation: slide4 3s;-ms-animation: slide4 3s;
 }.bar_ML{
-  position: absolute;background: white;
+  position: absolute;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 450px;top: 148px;left: 50%; margin-left: -215.145px;
   -webkit-animation: slide5 1.6s;-moz-animation: slide5 1.6s;-o-animation: slide5 1.6s;-ms-animation: slide5 1.6s;
 }.bar_MR{
-  position: absolute;background: white;
+  position: absolute;background: rgba(255, 255, 255, 0.4);
   width: 204.9px;height: 450px;top: 148px;right :50%; margin-right: -215.145px;
   -webkit-animation: slide6 2.2s;-moz-animation: slide6 2.2s;-o-animation: slide6 2.2s;-ms-animation: slide6 2.2s;
 }
 
-#D5{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 5%;
-    left: 5%;
-
-    font-size: 8vh;
-    font-family: "Courier New", Courier, monospace;
-
+#D5Background{
+  z-index: 10;
+  position: absolute;
+  opacity: 1;
+  height: 565px;
+  width: 184.8px;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}div.D5Title{
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  top: 3%;
+  left: 0;
+  position: absolute;
+  background-color: rgba(204, 234, 173, 1);
+}p.D5Title{
+  z-index: 11;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -40px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /*font-family: "Courier New Bold", Courier,  monospace;*/
+}div.D5Image{
+  background-image: url("housing.png");
+  top: 50%;
+  left: 20px;
 }
+
 /*  KEY FRAMES  */
 @-webkit-keyframes slide1 {
   0% {left: -400px;}
