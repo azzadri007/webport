@@ -104,7 +104,7 @@ body{
   width: 184.8px;
   top: 10px;
   left: 10px;
-  background-color: #EDF8E3;
+  
 }div.subtitle_box{
   z-index: 1;
   width: 100%;
@@ -129,7 +129,9 @@ body{
 
 
 /* D5 Project Bar -R2 */
-.bar_R2:hover  div.subtitle_Box{
+.d5_back{
+  background-color: #EDF8E3;
+}.bar_R2:hover  div.subtitle_Box{
   background-color: #D5EEBB
 }div.D5ImageOne{
   width: 184.8px;
@@ -166,24 +168,148 @@ body{
 }
 
 /* Website Project Bar */
-.bar_L2:hover  div.subtitle_Box{
+.Web_back{
+  background-color: #EDF8E3;/* rgba(25, 25, 25, 0.5);*/
+}.bar_L2:hover  div.subtitle_Box{
   background-color: #D5EEBB
 }
 #webTitle{
   text-align: left;
+}.WebImageOne{
+  top: 23%;
+  left: 0px;
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 5px, 179.8px 5px, 179.8px 107.5125px, 5px 107.5125px);
+  background-image: url("WebsitePanelImages/MainPage1.png");
+  background-position: -30px 0px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+}.WebImageTwo{
+  top: 23%;
+  left: 0px;
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 112.5125px, 179.8px 112.5125px, 179.8px 322.5375px, 5px 322.5375px);
+  background-image: url("WebsitePanelImages/codes.png");
+  background-position: 0px 90px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+}.WebImageThree{
+  top: 23%;
+  left: 0px;
+  width: 184.8px;
+  height: 435.05px;
+  position: absolute;
+  clip-path: polygon(5px 327.5375px, 179.8px 327.5375px, 179.8px 430.05px, 5px 430.05px);
+  background-image: url("WebsitePanelImages/MainPage2.png");
+  background-position: -30px 325px;
+  background-size: 240px;
+  background-repeat: no-repeat;
 }
 
+
 /* Progress Bar when on a project window */
+
+#color_Progress:hover, #menu_Progress:hover, #to_Bottom:hover, #return_Progress:hover, #to_Title:hover{
+  left:0px;}
+
 #bar_Progress{
   position:absolute;
   width: 70px;
-  height: 520px;
-  top: 50px;
- left: -100px;
- border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+  height: 400px;
+  top: 50%;
+  margin-top: -200px;
+  left: -80px;
+  border-radius: 10px;
+  /* background-color: rgba(255, 255, 255, 0.3); */
+}#return_Progress, #to_Title, #to_Bottom, #menu_Progress, #color_Progress{
+  position: absolute;
+  width: 100px;
+  left: -30px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.3); 
+  transition: left 0.8s;
+  transition-timing-function: ease-out;
 }
 
+#return_Progress{
+  height: 78px;
+  top: 0;
+  border-top-right-radius: 10px;
+}.return_Image{
+  background-image: url("ProgressBarFolder/return1.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  top: 16px;
+  left: 45px;
+  opacity: 0.6;
+}
+#to_Title{
+  height: 78px;
+  top: 80px;
+}.to_Title{
+  background-image: url("ProgressBarFolder/arrow2.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  top: 14px;
+  left: 14px;
+  opacity: 0.6;
+}
+#menu_Progress{
+  height: 78px;
+  top: 160px;
+}.menu_Progress{
+  background-image: url("ProgressBarFolder/menu1.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  top: 12px;
+  left: 50px;
+  opacity: 0.6;
+}
+#to_Bottom{
+  height: 78px;
+  top: 240px;
+}.to_Bottom{
+  background-image: url("ProgressBarFolder/arrow2.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  transform: rotate(270deg);
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  top: -10px;
+  left: 54px;
+  opacity: 0.6;
+}
+#color_Progress{
+  height: 80px;
+  top: 320px;
+  border-bottom-right-radius: 10px;
+}.color_Progress{
+  background-image: url("ProgressBarFolder/comb1.png");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  transform: rotate(270deg);
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  top: -15px;
+  left: 54px;
+  opacity: 0.6;
+}
 /*  KEY FRAMES  */
 @-webkit-keyframes slide1 {
   0% {left: -400px;}
