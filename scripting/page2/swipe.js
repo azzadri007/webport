@@ -6,9 +6,9 @@ $(document).on('click', '.bar_R2', function () {
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   //Do again so all the bars are fully out the picture(sometimes this bugs out)
   $(".bar_R1, .bar_L1, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
-
-  $("body").css('overflow-y', 'visible');
-  $("#D5Container").delay(2000).animate({'left':"50%"}, 2000);
+ 
+  $("#D5Container").delay(1000).animate({'left':"50%"}, 2000);
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
 });
 /* Doing the same for the Right side */
 $(document).on('click', '.bar_R1', function () {
@@ -17,14 +17,16 @@ $(document).on('click', '.bar_R1', function () {
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R2, .bar_L1, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
 
-  $("body").css('overflow-y', 'visible');
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
+
 });$(document).on('click', '.bar_MR', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_L2, .bar_ML, .title_Box").animate({'top':"-=600px"}, 1000);
   $(".bar_MR").delay(1000).animate({'margin-right':"375px", 'top':"50px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_ML, .bar_L2, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
 
-  $("body").css('overflow-y', 'visible');
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
+
 });
 
 //Left Side
@@ -34,14 +36,15 @@ $(document).on('click', '.bar_L1', function () {
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_R2, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
 
-  $("body").css('overflow-y', 'visible');
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
+
 });$(document).on('click', '.bar_L2', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_ML, .title_Box").animate({'top':"-=600px"}, 1000);
   $(".bar_L2").delay(1000).animate({'margin-left':"-580px", 'top':"12px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
   
-  $("body").css('overflow-y', 'visible');
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
   $("#WebContainer").delay(800).animate({'left':"50%"}, 2000);
 });$(document).on('click', '.bar_ML', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_L2, .title_Box").animate({'top':"-=600px"}, 1000);
@@ -49,7 +52,8 @@ $(document).on('click', '.bar_L1', function () {
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_L2, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
 
-  $("body").css('overflow-y', 'visible');
+  $("body").delay(1100).queue(function (next) { $(this).css({'overflow-y': 'visible'});next(); });
+
 });
 
 $(document).on('click', '#color_Progress', function () {
