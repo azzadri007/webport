@@ -6,6 +6,9 @@ $(document).on('click', '.bar_R2', function () {
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   //Do again so all the bars are fully out the picture(sometimes this bugs out)
   $(".bar_R1, .bar_L1, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+
+  $("body").css('overflow-y', 'visible');
+  $("#D5Container").delay(2000).animate({'left':"50%"}, 2000);
 });
 /* Doing the same for the Right side */
 $(document).on('click', '.bar_R1', function () {
@@ -13,11 +16,15 @@ $(document).on('click', '.bar_R1', function () {
   $(".bar_R1").delay(1000).animate({'margin-right':"375px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R2, .bar_L1, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+
+  $("body").css('overflow-y', 'visible');
 });$(document).on('click', '.bar_MR', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_L2, .bar_ML, .title_Box").animate({'top':"-=600px"}, 1000);
   $(".bar_MR").delay(1000).animate({'margin-right':"375px", 'top':"50px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_ML, .bar_L2, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+
+  $("body").css('overflow-y', 'visible');
 });
 
 //Left Side
@@ -26,16 +33,23 @@ $(document).on('click', '.bar_L1', function () {
   $(".bar_L1").delay(1000).animate({'margin-left':"-580px", 'top':"12px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_R2, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+
+  $("body").css('overflow-y', 'visible');
 });$(document).on('click', '.bar_L2', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_ML, .title_Box").animate({'top':"-=600px"}, 1000);
   $(".bar_L2").delay(1000).animate({'margin-left':"-580px", 'top':"12px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+  
+  $("body").css('overflow-y', 'visible');
+  $("#WebContainer").delay(800).animate({'left':"50%"}, 2000);
 });$(document).on('click', '.bar_ML', function () {
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_L2, .title_Box").animate({'top':"-=600px"}, 1000);
   $(".bar_ML").delay(1000).animate({'margin-left':"-580px",'top':"50px"}, 1200);
   $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
   $(".bar_R1, .bar_L1, .bar_R2, .bar_MR, .bar_L2, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+
+  $("body").css('overflow-y', 'visible');
 });
 
 $(document).on('click', '#color_Progress', function () {
@@ -48,14 +62,18 @@ $(document).on('click', '#color_Progress', function () {
 $(document).on('click', '#return_Progress', function () {
   $('#bar_Progress').delay(1800).animate({'left':"-80px"}, 500);
 
-  $(".bar_L2").animate({'margin-left':"-442.58px", 'top':"12px"}, 1200);
-  $(".bar_L1").animate({'margin-left':"-669.34px", 'top':"50px"}, 1200);
+  $(".bar_L2").delay(800).animate({'margin-left':"-442.58px", 'top':"12px"}, 1200);
+  $(".bar_L1").delay(800).animate({'margin-left':"-669.34px", 'top':"50px"}, 1200);
 
-  $(".bar_R2").animate({'margin-right':"-442.58px", 'top':"12px"}, 1200);
-  $(".bar_R1").animate({'margin-right':"-669.34px", 'top':"12px"}, 1200);
+  $(".bar_R2").delay(800).animate({'margin-right':"-442.58px", 'top':"12px"}, 1200);
+  $(".bar_R1").delay(800).animate({'margin-right':"-669.34px", 'top':"12px"}, 1200);
 
-  $(".bar_ML").animate({'margin-left':"-215.145px", 'top':"148px"}, 1200);
-  $(".bar_MR").animate({'margin-right':"-215.145px", 'top':"148px"}, 1200);
+  $(".bar_ML").delay(800).animate({'margin-left':"-215.145px", 'top':"148px"}, 1200);
+  $(".bar_MR").delay(800).animate({'margin-right':"-215.145px", 'top':"148px"}, 1200);
 
-  $(".title_Box").animate({'margin-left':"-215px", 'top':"0px"}, 1200);
+  $(".title_Box").delay(800).animate({'margin-left':"-215px", 'top':"0px"}, 2000);
+
+  $("body").css('overflow', 'hidden');
+  $("#D5Container").animate({'left':"200%"}, 1200);
+  $("#WebContainer").animate({'left':"200%"}, 1200);
 });
