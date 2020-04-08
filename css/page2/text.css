@@ -81,6 +81,9 @@
   font-weight: bold;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+#Write_twoContainer{
+  font-size: 25px !important;
+}
 
 #SpeakContainer{ /* Contains the flow  and title*/
   position: absolute;
