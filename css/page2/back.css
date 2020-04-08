@@ -1,8 +1,9 @@
-
 body{
   background-color: #aadd77;
   overflow-x: hidden;
   overflow-y: hidden;
+}html{
+  background-color: #aadd77;
 }
 
 .title_Box{
@@ -50,21 +51,29 @@ body{
   background-color: white;
 }
 #BARS{
-  position: fixed;
+  position: absolute;
   
   width: 100%;
   height:200%;
   left: 0;
   top: 0;
 }
-/* Describing Right Pannels */
 
+/* this is done to easily position the whole page at the center(top)*/
+#Page_Container{
+  position: absolute;
+  width:100%;
+  height: 600px;
+  top: 50%;
+  margin-top: -300px;
+  left:0;
+}
 
 /* From Left to Right
         L1, L2, ML, MR, R2, R1 */
 .bar_L1{
   position: absolute;background: rgba(255, 255, 255, 0.3);
-  width: 204.9px;height: 548px;top: 50px;left: 50%; margin-left: -669.34px;
+  width: 204.9px;height: 585px;top: 12px;left: 50%; margin-left: -669.34px;
   -webkit-animation: slide1 2s;-moz-animation: slide1 2s;-o-animation: slide1 2s;-ms-animation: slide1 2s;
 }.bar_L2{
   position: absolute;background: rgba(255, 255, 255, 0.3);
@@ -97,7 +106,7 @@ body{
 
 /* Pannel Layout*/
 #pannel_Back{ /* inner background of pannel (container for everything else) */
-  z-index: 10;
+  z-index: 100;
   position: absolute;
   opacity: 1;
   height: 565px;
@@ -137,7 +146,7 @@ body{
   height: 435.05px;
   position: absolute;
   clip-path: polygon(5px 5px, 179.8px 5px, 5px 212.525px);
-  background-image: url("code.jpg");
+  background-image: url("D5PanelImages/code.jpg");
   top: 23%;
   left: 0px;
 }div.D5ImageTwo{
@@ -147,7 +156,7 @@ body{
   clip-path: polygon(5px 217.525px, 179.8px 10px, 179.8px 425.05px);
   top: 23%;
   left: 0px; 
-  background-image: url("housing.png");
+  background-image: url("D5PanelImages/housing.png");
   background-size: 150px;
   background-repeat: no-repeat;
   background-position: 30px 130px;
@@ -158,7 +167,7 @@ body{
   height: 435.05px;
   position: absolute;
   clip-path: polygon(5px 222.525px, 5px 430.05px, 179.8px 430.05px);
-  background-image: url("board.jpg");
+  background-image: url("D5PanelImages/board.jpg");
   background-position:-15px 222px;
   background-size: 300px;
   background-repeat: no-repeat;
@@ -326,18 +335,17 @@ body{
   100% {left: 50%;}}
 
 @-webkit-keyframes slide2 {
-  0% {top: -600px;}
+  0% {top: -1000px;}
   100% {top: 12px;}}
 @-moz-keyframes slide2 {
-  0% {top: -600px;}
+  0% {top: -1000px;}
   100% {top: 12px;}}
  @-o-keyframes slide2 {
-  0% {top: -600px;}
+  0% {top: -1000px;}
   100% {top: 12px;}}
 @-ms-keyframes slide2 {
-  0% {top: -600px;}
-  100% {top: 12px;}}0% {top: -49%;}
-  100% {top: 1%;}}
+  0% {top: -1000px;}
+  100% {top: 12px;}}
 
 @-webkit-keyframes slide3{
   0% {top: 101%;}

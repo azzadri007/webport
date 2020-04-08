@@ -5,10 +5,11 @@
   position: absolute;
   border-color: rgba(0, 0, 0, 0.5);
   width: 1000px;
-  height: auto;
-  top: 12px;
+  height: 700px;
+  top: -50px;
   left: 200%;
   margin-left: -350px;
+  overflow-y: scroll;
 }#D5TitleBox{
   position: relative;
   width: 600px;
@@ -31,10 +32,11 @@
   position: absolute;
   border-color: rgba(0, 0, 0, 0.5);
   width: 1000px;
-  height: auto;
-  top: 12px;
+  height: 700px;
+  top: -50px;
   left: 200%;
   margin-left: -350px;
+  overflow-y: scroll;
 }#WebTitleBox{
   position: relative;
   width: 600px;
