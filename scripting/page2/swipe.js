@@ -19,9 +19,11 @@ $(document).ready(function (){
         $(".bar_R2, .bar_L1, .bar_L2, .bar_MR, .bar_ML, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
       });$(document).on('click', '.bar_MR', function () {
         $(".bar_R1, .bar_L1, .bar_R2, .bar_L2, .bar_ML, .title_Box").animate({'top':"-2000px"}, 1000);
-        $(".bar_MR").delay(1000).animate({'margin-right':"375px", 'top':"50px"}, 1200);
+        $(".bar_MR").delay(1000).animate({'margin-right':"375px", 'top':"75px"}, 1200);
         $("#bar_Progress").delay(1800).animate({'left':"-10px"}, 500);
         $(".bar_R1, .bar_L1, .bar_R2, .bar_ML, .bar_L2, .title_Box").delay(1000).animate({'top':"-=600px"}, 1000);
+      
+        $("#SpeakContainer").delay(1000).animate({'left':"52%"}, 2000);
       });
       
       //Left Side
