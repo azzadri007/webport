@@ -54,6 +54,34 @@
   font-weight: bold;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#WriteContainer{ /* Contains the flow  and title*/
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.5);
+  width: 1000px;
+  height: 700px;
+  top: -50px;
+  left: 200%;
+  margin-left: -350px;
+  overflow-y: scroll;
+}#WriteTitleBox{
+  position: relative;
+  width: 700px;
+  height: 10%;
+  top: -20px;
+  left: 50%;
+  margin-left: -350px;
+  padding-bottom: 20px;
+}.WriteTitle{
+  color: rgba(255, 255, 255, 0.8);
+  top: 0;
+
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
                                          /* 
   Text Containers used for flow of page
       -it's easier to update this way

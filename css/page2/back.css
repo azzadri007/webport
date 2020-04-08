@@ -103,6 +103,7 @@ body{
 .bar_R2:hover{background-color: rgba(255, 255, 255, 0.5);}
 .bar_ML:hover{background-color: rgba(255, 255, 255, 0.5);}
 .bar_MR:hover{background-color: rgba(255, 255, 255, 0.5);}
+/****************************************************************************************************************/
 
 /* Pannel Layout*/
 #pannel_Back{ /* inner background of pannel (container for everything else) */
@@ -135,6 +136,7 @@ body{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   /*font-family: "Courier New Bold", Courier,  monospace;*/
 }
+/****************************************************************************************************************/
 
 /* D5 Project Bar -R2 */
 .d5_back{
@@ -174,7 +176,7 @@ body{
   top: 23%;
   left: 0px;
 }
-
+/****************************************************************************************************************/
 
 /* Website Project Bar */
 .Web_back{
@@ -218,13 +220,51 @@ body{
   background-size: 240px;
   background-repeat: no-repeat;
 }
+/****************************************************************************************************************/
 
+/* Written Competence for Ukesf competition */
+.Write_back{
+  height: 430px !important;
+  background-color: #EDF8E3;/* rgba(25, 25, 25, 0.5);*/
+}.bar_ML:hover  div.subtitle_Box{
+  background-color: #D5EEBB
+}
+#Write_sub{
+  font-size: 25px !important;
+  top: -15px !important;
+}
+.WriteImageOne{
+ position: absolute;
+ height: 30%;
+ width: 100%;
+ top: 23%;
+ left: 0px;
+ background-image: url("WritePanelImages/essay.png");
+ clip-path: polygon(5px 5px, 179.8px 5px, 179.8px 126.5px, 5px 126.5px);
+ background-position: 2px 4px;
+ background-size: 180px;
+ background-repeat: no-repeat;
+}
+.WriteImageTwo{
+  position: absolute;
+  height: 47%;
+  width: 100%;
+  top: 53%;
+  left: 0%;
+  background-image: url("WritePanelImages/competition.png");
+  clip-path: polygon(5px 2.5px, 179.8px 2.5px, 179.8px 197.1px, 5px 197.1px);
+  background-position: 5px 5px;
+  background-size: 180px;
+  background-repeat: no-repeat;
+}
+
+
+
+/****************************************************************************************************************/
 
 /* Progress Bar when on a project window */
-
 #color_Progress:hover, #to_Bottom:hover, #return_Progress:hover, #to_Title:hover{
   left:0px;}
-
 #bar_Progress{
   position:fixed;
   width: 70px;
@@ -243,7 +283,6 @@ body{
   transition: left 0.8s;
   transition-timing-function: ease-out;
 }
-
 #return_Progress{
   height: 78px;
   top: 0;
@@ -319,7 +358,7 @@ body{
   left: 54px;
   opacity: 0.6;
 }
-
+/****************************************************************************************************************/
 /*  KEY FRAMES  */
 @-webkit-keyframes slide1 {
   0% {left: -400px;}
