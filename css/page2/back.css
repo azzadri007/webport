@@ -296,6 +296,20 @@ body{
 }
 /****************************************************************************************************************/
 
+/* Hyper Chip Design Project */
+.Hyper_back{
+  background-color: #EDF8E3;/* rgba(25, 25, 25, 0.5);*/
+}.bar_R1:hover  div.subtitle_Box{
+  background-color: #D5EEBB
+}
+#Speak_sub{
+  font-size: 20px !important;
+  top: -05px !important;
+  text-align: center;
+}
+
+/****************************************************************************************************************/
+
 /* Progress Bar when on a project window */
 #color_Progress:hover, #to_Bottom:hover, #return_Progress:hover, #to_Title:hover{
   left:0px;}

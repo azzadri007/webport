@@ -1,5 +1,4 @@
 body{
-
   transition-duration: .75s;
   transition-timing-function: linear;
   background-color: white;
@@ -113,11 +112,10 @@ body{
   display: block;
   background-color: #d7d7d7;
 }
-
+/*
 #A1:hover{
-  background-color: #ff9eb5 !important;
+  background-color: #ff9eb5 ;
 }
-
 #A2:hover{
   background-color: #aadd77 !important;
 }
@@ -127,3 +125,4 @@ body{
 #A4:hover{
   background-color: #fdfd96 !important;
 }
+*/

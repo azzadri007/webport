@@ -1,6 +1,46 @@
+var centerPressed = 0;
+
+$(document).ready(function (){
+  
+
+  $("#A1").mouseover(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#ff9eb5"});}
+    else{$(this).css({"background-color":"#white"});}
+  });
+  $("#A1").mouseout(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
+    else{$(this).css({"background-color":"white"});}
+  });
+  $("#A2").mouseover(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#aadd77"});}
+    else{$(this).css({"background-color":"#white"});}
+  });
+  $("#A2").mouseout(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
+    else{$(this).css({"background-color":"white"});}
+  });
+  $("#A3").mouseover(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#aec6cf"});}
+    else{$(this).css({"background-color":"#white"});}
+  });
+  $("#A3").mouseout(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
+    else{$(this).css({"background-color":"white"});}
+  });
+  $("#A4").mouseover(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#fdfd96"});}
+    else{$(this).css({"background-color":"#white"});}
+  });
+  $("#A4").mouseout(function(){
+    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
+    else{$(this).css({"background-color":"white"});}
+  });
+});
 
 /* Holding Id properties as variables */
 function hold(){
+  window.centerPressed = 1;
+  console.log('1');
 
   var A1 = document.getElementById("A1");
   var A2 = document.getElementById("A2");
@@ -37,11 +77,12 @@ function hold(){
   var E20 = document.getElementById("E20");
 
 }
-
+ 
 /*----- Setting colour for when click on center -----*/
 /*  Color of hexagons now stay  */
 function stick(){
   hold();
+
   document.getElementById("center_hex").style.backgroundColor = "#d7d7d7";
 
   A1.style.backgroundColor = "#F2F2F2";

@@ -71,16 +71,16 @@ $(document).ready(function (){
       
         $("body").css('overflow', 'hidden');
         $("#D5Container").animate({'left':"200%"}, 1200);
-        $("#WebContainer, #WriteContainer").animate({'left':"200%"}, 1200);
-        $("#D5Container,#WebContainer, #WriteContainer").delay(2000).animate({ scrollTop: 0 }, 1500);
+        $("#WebContainer, #WriteContainer, #SpeakContainer").animate({'left':"200%"}, 1200);
+        $("#D5Container,#WebContainer, #WriteContainer, #SpeakContainer").delay(2000).animate({ scrollTop: 0 }, 1500);
       });
       
       $(document).on('click', '#to_Title', function () {
-        $("#D5Container,#WebContainer, #WriteContainer").animate({ scrollTop: 0 }, 1500);
+        $("#D5Container,#WebContainer, #WriteContainer, #SpeakContainer").animate({ scrollTop: 0 }, 1500);
       });
       
       $(document).on('click', '#to_Bottom', function () {
-        $("##D5Container,#WebContainer, #WriteContainer").animate({ scrollTop: $(document).height()}, 1500);
+        $("#D5Container,#WebContainer, #WriteContainer, #SpeakContainer").animate({ scrollTop: $(document).height()}, 1500);
       });
 
 });
