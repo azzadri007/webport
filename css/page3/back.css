@@ -80,3 +80,26 @@ body{
   height: 348px;
   width: 400px;
 }
+
+#back_space{
+  z-index: 100;
+  background-color: #aadd77;
+  opacity: 0.3;
+  background-image: url("arrow.png");
+  transform: scaleX(-1);
+  background-repeat: no-repeat;
+  background-position: 14px 9px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-size: 30px;
+  width: 70px;
+  height: 30px;
+  top: 10px;
+  left: -10px;
+  display: block;
+  position: fixed;
+  -webkit-animation: back 2s;-moz-animation: back 2s;-o-animation: back 2s;-ms-animation: back 2s;
+}#back_space:hover{
+  background-color: white;
+}
