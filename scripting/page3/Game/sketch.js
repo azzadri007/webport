@@ -65,14 +65,14 @@ function draw() {
     fill(0.2);
     text("Your Points:   "+ count, 2 ,18);
     fill(0.2);
-    text("Enenmy Points: " + enemyCount, 2, 36);
+    text("Enemy Points: " + enemyCount, 2, 36);
     state = "Play";
   }else{
     textSize(20);
     fill("rgba(0, 255, 0, 1)");
     text("Your Points:   "+ count, 2 ,18);
     fill("rgba(255, 0, 0, 1)");
-    text("Enenmy Points: " + enemyCount, 2, 36);
+    text("Enemy Points: " + enemyCount, 2, 36);
     state = "Pause";
     
   }
