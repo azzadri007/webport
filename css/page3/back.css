@@ -83,7 +83,8 @@ body{
 
 #back_space{
   z-index: 100;
-  background-color: #aadd77;
+  background-color: grey;
+  opacity: 0.5;
   opacity: 0.3;
   background-image: url("arrow.png");
   transform: scaleX(-1);
