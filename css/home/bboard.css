@@ -5,14 +5,14 @@
 #B1, #B2, #B3, #B4, #B5, #B6, #B7, #B8{
   background-color: white;
   transition-property: background-color;
-  transition-duration: .75s;
+  transition-duration: .8s;
   transition-timing-function: linear;
   position: fixed;
 
   clip-path: polygon(50px 0px, 150px 0px, 200px 87px, 150px 174px, 50px 174px, 0px 86px);
   height: 174px;
   width: 200px;
-  z-index: 1;
+  z-index: 101;
 }
 
 

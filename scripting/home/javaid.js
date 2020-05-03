@@ -1,47 +1,80 @@
 var centerPressed = 0;
+var elm = ["B1",          "B3",     "B4",  "B5",    "B6",   "B7",   "B8",  "E1",  "E2",   "E3",     "E4",   "E5",   "E6",   "E7",   "E8",    "E9", "E10",   "E11", "E12",  "E13",   "E14", "E15",  "E16",  "E17",  "E18",  "E19",  "E20"];
+var delayInit = ["0.5s", "0.65s", "0.5s", "0.6s", "0.4s", "0.5s", "0.6s", "0.75s","0.85s", "0.75s","0.65s","1.25s","1.15s","1.5s","0.75s","1.05s","1.15s","0.75s","0.85s","1.15s","1.25s","0.65s","0.75s","1.15s","1.15s","1.5s","0.65s",]
+
+window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
 
 $(document).ready(function (){
-  
-
   $("#A1").mouseover(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#ff9eb5"});}
-    else{$(this).css({"background-color":"#white"});}
+    if(window.centerPressed == 1){$("#A1").css({"background-color":"#ff9eb5"});}
+    else{$("#A1").css({"background-color":"white"});}
   });
   $("#A1").mouseout(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
-    else{$(this).css({"background-color":"white"});}
+    if(window.centerPressed == 1){$("#A1").css({"background-color":"#f2f2f2"});}
+    else{$("#A1").css({"background-color":"white"});}
   });
   $("#A2").mouseover(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#aadd77"});}
-    else{$(this).css({"background-color":"#white"});}
+    if(window.centerPressed == 1){$("#A2").css({"background-color":"#aadd77"});}
+    else{$("#A2").css({"background-color":"white"});}
   });
   $("#A2").mouseout(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
-    else{$(this).css({"background-color":"white"});}
+    if(window.centerPressed == 1){$("#A2").css({"background-color":"#f2f2f2"});}
+    else{$("#A2").css({"background-color":"white"});}
   });
   $("#A3").mouseover(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#aec6cf"});}
-    else{$(this).css({"background-color":"#white"});}
+    if(window.centerPressed == 1){$("#A3").css({"background-color":"#aec6cf"});}
+    else{$("#A3").css({"background-color":"white"});}
   });
   $("#A3").mouseout(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
-    else{$(this).css({"background-color":"white"});}
+    if(window.centerPressed == 1){$("#A3").css({"background-color":"#f2f2f2"});}
+    else{$("#A3").css({"background-color":"white"});}
   });
   $("#A4").mouseover(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#fdfd96"});}
-    else{$(this).css({"background-color":"#white"});}
+    if(window.centerPressed == 1){$("#A4").css({"background-color":"#fdfd96"});}
+    else{$("#A4").css({"background-color":"white"});}
   });
   $("#A4").mouseout(function(){
-    if(window.centerPressed == 1){$(this).css({"background-color":"#f2f2f2"});}
-    else{$(this).css({"background-color":"white"});}
+    if(window.centerPressed == 1){$("#A4").css({"background-color":"#f2f2f2"});}
+    else{$("#A4").css({"background-color":"white"});}
   });
+
+  for(i=0;i<27;i++){
+    document.getElementById(elm[i]).style.transitionDelay='0s';
+
+    var d = new Date();
+    var n = d.getTime();
+
+    let colorR = (Math.floor(Math.random() * n *(230 - 70)) + 70)%256; // generate random numbers 
+    let colorG = (Math.floor(Math.random() * n *(230 - 70)) + 70)%256;
+    let colorB = (Math.floor(Math.random() * n *(230 - 70)) + 70)%256;
+    
+    let str = "#"+elm[i];
+
+    $(str).mouseover(function(){
+      if(window.centerPressed == 1){$(str).css({"background-color":"rgba(" + colorR + "," + colorG + "," + colorB + ", 0.5)"});}
+      else{$(str).css({"background-color":"white"});}
+    });
+    $(str).mouseout(function(){
+      if(window.centerPressed == 1){$(str).css({"background-color":"#f2f2f2"});}
+      else{$(str).css({"background-color":"white"});}
+    });
+
+  }
+
 });
 
 /* Holding Id properties as variables */
 function hold(){
   window.centerPressed = 1;
-  console.log('1');
-
+  
   var A1 = document.getElementById("A1");
   var A2 = document.getElementById("A2");
   var A3 = document.getElementById("A3");
@@ -54,7 +87,6 @@ function hold(){
   var B6 = document.getElementById("B6");
   var B7 = document.getElementById("B7");
   var B8 = document.getElementById("B8");
-
   var E1 = document.getElementById("E1");
   var E2 = document.getElementById("E2");
   var E3 = document.getElementById("E3");
@@ -78,129 +110,45 @@ function hold(){
 
 }
  
-/*----- Setting colour for when click on center -----*/
-/*  Color of hexagons now stay  */
+function resetDelay(){
+  for(j=0;j<27;j++){
+    document.getElementById(elm[j]).style.transitionDelay= delayInit[j];
+  }
+}
+
 function stick(){
   hold();
 
   document.getElementById("center_hex").style.backgroundColor = "#d7d7d7";
 
-  A1.style.backgroundColor = "#F2F2F2";
-  A2.style.backgroundColor = "#F2F2F2";
-  A3.style.backgroundColor = "#F2F2F2";
-  A4.style.backgroundColor = "#F2F2F2";
-  B1.style.backgroundColor = "#F2F2F2";
-  B3.style.backgroundColor = "#F2F2F2";
-  B4.style.backgroundColor = "#F2F2F2";
-  B5.style.backgroundColor = "#F2F2F2";
-  B6.style.backgroundColor = "#F2F2F2";
-  B7.style.backgroundColor = "#F2F2F2";
-  B8.style.backgroundColor = "#F2F2F2";
+  // set every element to grey (unless hovered over)
+  loadPage("#F2F2F2")
 
-  E1.style.backgroundColor = "#F2F2F2";
-  E2.style.backgroundColor = "#F2F2F2";
-  E3.style.backgroundColor = "#F2F2F2";
-  E4.style.backgroundColor = "#F2F2F2";
-  E5.style.backgroundColor = "#F2F2F2";
-  E6.style.backgroundColor = "#F2F2F2";
-  E7.style.backgroundColor = "#F2F2F2";
-  E8.style.backgroundColor = "#F2F2F2";
-  E9.style.backgroundColor = "#F2F2F2";
-  E10.style.backgroundColor = "#F2F2F2";
-  E11.style.backgroundColor = "#F2F2F2";
-  E12.style.backgroundColor = "#F2F2F2";
-  E13.style.backgroundColor = "#F2F2F2";
-  E14.style.backgroundColor = "#F2F2F2";
-  E15.style.backgroundColor = "#F2F2F2";
-  E16.style.backgroundColor = "#F2F2F2";
-  E17.style.backgroundColor = "#F2F2F2";
-  E18.style.backgroundColor = "#F2F2F2";
-  E19.style.backgroundColor = "#F2F2F2";
-  E20.style.backgroundColor = "#F2F2F2";
-
+  // I used LoadPage for most of the elements but didnt want page background and text color to change so have to re-set them
+  document.body.style.background = "white";
+  document.getElementById("center_hex").style.backgroundColor = "#d7d7d7";
+  document.getElementById("A1Text").style.color = "white";
+  document.getElementById("A2Text").style.color = "white";
+  document.getElementById("A3Text").style.color = "white";
 }
 
-function hexA1(){
-/* #EE82EE #DA70D6 */
-  document.body.style.background = "#ff9eb5";
+function hexA1(){ // Top right centre hexagon clicked "CV" 
   document.getElementById("center_hex").style.visibility = "hidden";
+  resetDelay();
+  loadPage("#ff9eb5");
 
-    A1.style.backgroundColor = "#ff9eb5";
-    A2.style.backgroundColor = "#ff9eb5";
-    A3.style.backgroundColor = "#ff9eb5";
-    A4.style.backgroundColor = "#ff9eb5";
-    B1.style.backgroundColor = "#ff9eb5";
-    B3.style.backgroundColor = "#ff9eb5";
-    B4.style.backgroundColor = "#ff9eb5";
-    B5.style.backgroundColor = "#ff9eb5";
-    B6.style.backgroundColor = "#ff9eb5";
-    B7.style.backgroundColor = "#ff9eb5";
-    B8.style.backgroundColor = "#ff9eb5";
-
-    E1.style.backgroundColor = "#ff9eb5";
-    E2.style.backgroundColor = "#ff9eb5";
-    E3.style.backgroundColor = "#ff9eb5";
-    E4.style.backgroundColor = "#ff9eb5";
-    E5.style.backgroundColor = "#ff9eb5";
-    E6.style.backgroundColor = "#ff9eb5";
-    E7.style.backgroundColor = "#ff9eb5";
-    E8.style.backgroundColor = "#ff9eb5";
-    E9.style.backgroundColor = "#ff9eb5";
-    E10.style.backgroundColor = "#ff9eb5";
-    E11.style.backgroundColor = "#ff9eb5";
-    E12.style.backgroundColor = "#ff9eb5";
-    E13.style.backgroundColor = "#ff9eb5";
-    E14.style.backgroundColor = "#ff9eb5";
-    E15.style.backgroundColor = "#ff9eb5";
-    E16.style.backgroundColor = "#ff9eb5";
-    E17.style.backgroundColor = "#ff9eb5";
-    E18.style.backgroundColor = "#ff9eb5";
-    E19.style.backgroundColor = "#ff9eb5";
-    E20.style.backgroundColor = "#ff9eb5";
-
-    setTimeout(function(){A1.style.display = "none";
+  setTimeout(function(){A1.style.display = "none";
     A2.style.display = "none";
     A3.style.display = "none";
-    A4.style.display = "none";}, 1800);
-    setTimeout(function(){window.location.href="pageA1.html"}, 2300);
+    A4.style.display = "none";}, 1800); // this function prvents a "hover-glitch" where if you are still hovering over the clicked hex it will flicker
+  setTimeout(function(){window.location.href="pageA1.html"}, 2300);
 }
-function hexA2(){
-/* #EE82EE #DA70D6 */
-document.body.style.background = "#aadd77";
+
+function hexA2(){ // Bottom right hexagon clicked "Projects"
   document.getElementById("center_hex").style.visibility = "hidden";
 
-    A1.style.backgroundColor = "#aadd77";
-    A2.style.backgroundColor = "#aadd77";
-    A3.style.backgroundColor = "#aadd77";
-    A4.style.backgroundColor = "#aadd77";
-    B1.style.backgroundColor = "#aadd77";
-    B3.style.backgroundColor = "#aadd77";
-    B4.style.backgroundColor = "#aadd77";
-    B5.style.backgroundColor = "#aadd77";
-    B6.style.backgroundColor = "#aadd77";
-    B7.style.backgroundColor = "#aadd77";
-    B8.style.backgroundColor = "#aadd77";
-
-    E1.style.backgroundColor = "#aadd77";
-    E2.style.backgroundColor = "#aadd77";
-    E3.style.backgroundColor = "#aadd77";
-    E4.style.backgroundColor = "#aadd77";
-    E5.style.backgroundColor = "#aadd77";
-    E6.style.backgroundColor = "#aadd77";
-    E7.style.backgroundColor = "#aadd77";
-    E8.style.backgroundColor = "#aadd77";
-    E9.style.backgroundColor = "#aadd77";
-    E10.style.backgroundColor = "#aadd77";
-    E11.style.backgroundColor = "#aadd77";
-    E12.style.backgroundColor = "#aadd77";
-    E13.style.backgroundColor = "#aadd77";
-    E14.style.backgroundColor = "#aadd77";
-    E15.style.backgroundColor = "#aadd77";
-    E16.style.backgroundColor = "#aadd77";
-    E17.style.backgroundColor = "#aadd77";
-    E18.style.backgroundColor = "#aadd77";
-    E19.style.backgroundColor = "#aadd77";
-    E20.style.backgroundColor = "#aadd77";
+  resetDelay();
+  loadPage("#aadd77");
 
     setTimeout(function(){A1.style.display = "none";
     A2.style.display = "none";
@@ -208,43 +156,13 @@ document.body.style.background = "#aadd77";
     A4.style.display = "none";}, 1800);
     setTimeout(function(){window.location.href="pageA2.html"}, 2300);
 }
-function hexA3(){
-/* #EE82EE #DA70D6 */
+
+function hexA3(){ // Bottom Left hexagon clicked "Mini-Games"
 document.body.style.background = "#aec6cf";
   document.getElementById("center_hex").style.visibility = "hidden";
 
-    A1.style.backgroundColor = "#aec6cf";
-    A2.style.backgroundColor = "#aec6cf";
-    A3.style.backgroundColor = "#aec6cf";
-    A4.style.backgroundColor = "#aec6cf";
-    B1.style.backgroundColor = "#aec6cf";
-    B3.style.backgroundColor = "#aec6cf";
-    B4.style.backgroundColor = "#aec6cf";
-    B5.style.backgroundColor = "#aec6cf";
-    B6.style.backgroundColor = "#aec6cf";
-    B7.style.backgroundColor = "#aec6cf";
-    B8.style.backgroundColor = "#aec6cf";
-
-    E1.style.backgroundColor = "#aec6cf";
-    E2.style.backgroundColor = "#aec6cf";
-    E3.style.backgroundColor = "#aec6cf";
-    E4.style.backgroundColor = "#aec6cf";
-    E5.style.backgroundColor = "#aec6cf";
-    E6.style.backgroundColor = "#aec6cf";
-    E7.style.backgroundColor = "#aec6cf";
-    E8.style.backgroundColor = "#aec6cf";
-    E9.style.backgroundColor = "#aec6cf";
-    E10.style.backgroundColor = "#aec6cf";
-    E11.style.backgroundColor = "#aec6cf";
-    E12.style.backgroundColor = "#aec6cf";
-    E13.style.backgroundColor = "#aec6cf";
-    E14.style.backgroundColor = "#aec6cf";
-    E15.style.backgroundColor = "#aec6cf";
-    E16.style.backgroundColor = "#aec6cf";
-    E17.style.backgroundColor = "#aec6cf";
-    E18.style.backgroundColor = "#aec6cf";
-    E19.style.backgroundColor = "#aec6cf";
-    E20.style.backgroundColor = "#aec6cf";
+  resetDelay();
+  loadPage("#aec6cf");
 
     setTimeout(function(){A1.style.display = "none";
     A2.style.display = "none";
@@ -255,42 +173,10 @@ document.body.style.background = "#aec6cf";
 }
 
 function hexA4(){
-/* #EE82EE #DA70D6 */
-document.body.style.background = "#fdfd96";
   document.getElementById("center_hex").style.visibility = "hidden";
 
-    A1.style.backgroundColor = "#fdfd96";
-    A2.style.backgroundColor = "#fdfd96";
-    A3.style.backgroundColor = "#fdfd96";
-    A4.style.backgroundColor = "#fdfd96";
-    B1.style.backgroundColor = "#fdfd96";
-    B3.style.backgroundColor = "#fdfd96";
-    B4.style.backgroundColor = "#fdfd96";
-    B5.style.backgroundColor = "#fdfd96";
-    B6.style.backgroundColor = "#fdfd96";
-    B7.style.backgroundColor = "#fdfd96";
-    B8.style.backgroundColor = "#fdfd96";
-
-    E1.style.backgroundColor = "#fdfd96";
-    E2.style.backgroundColor = "#fdfd96";
-    E3.style.backgroundColor = "#fdfd96";
-    E4.style.backgroundColor = "#fdfd96";
-    E5.style.backgroundColor = "#fdfd96";
-    E6.style.backgroundColor = "#fdfd96";
-    E7.style.backgroundColor = "#fdfd96";
-    E8.style.backgroundColor = "#fdfd96";
-    E9.style.backgroundColor = "#fdfd96";
-    E10.style.backgroundColor = "#fdfd96";
-    E11.style.backgroundColor = "#fdfd96";
-    E12.style.backgroundColor = "#fdfd96";
-    E13.style.backgroundColor = "#fdfd96";
-    E14.style.backgroundColor = "#fdfd96";
-    E15.style.backgroundColor = "#fdfd96";
-    E16.style.backgroundColor = "#fdfd96";
-    E17.style.backgroundColor = "#fdfd96";
-    E18.style.backgroundColor = "#fdfd96";
-    E19.style.backgroundColor = "#fdfd96";
-    E20.style.backgroundColor = "#fdfd96";
+  resetDelay();
+  loadPage("#fdfd96");
 
     setTimeout(function(){A1.style.display = "none";
     A2.style.display = "none";
@@ -298,41 +184,48 @@ document.body.style.background = "#fdfd96";
     A4.style.display = "none";}, 1800);
 }
 
-function hide(){
-  document.getElementById("center_hex").style.visibility = "hidden";
+function loadPage(COL){
+/*This fucntion loads in the colour of the selected page onto each element
+  this creates the wave effect across all hexagon elements (aswell as the disapearing of words)
+*/
+  document.body.style.background = COL;
 
-  A1.style.display = "none";
-  A2.style.display = "none";
-  A3.style.display = "none";
-  A4.style.display = "none";
+  document.getElementById("A1Text").style.color = COL;
+  document.getElementById("A2Text").style.color = COL;
+  document.getElementById("A3Text").style.color = COL;
+  // document.getElementById("A4Text").style.color = COL;
 
-    B1.style.visibility = "hidden";
-    B3.style.visibility = "hidden";
-    B4.style.visibility = "hidden";
-    B5.style.visibility = "hidden";
-    B6.style.visibility = "hidden";
-    B7.style.visibility = "hidden";
-    B8.style.visibility = "hidden";
+  A1.style.backgroundColor = COL;
+  A2.style.backgroundColor = COL;
+  A3.style.backgroundColor = COL;
+  A4.style.backgroundColor = COL;
 
-    E1.style.visibility = "hidden";
-    E2.style.visibility = "hidden";
-    E3.style.visibility = "hidden";
-    E4.style.visibility = "hidden";
-    E5.style.visibility = "hidden";
-    E6.style.visibility = "hidden";
-    E7.style.visibility = "hidden";
-    E8.style.visibility = "hidden";
-    E9.style.visibility = "hidden";
-    E10.style.visibility = "hidden";
-    E11.style.visibility = "hidden";
-    E12.style.visibility = "hidden";
-    E13.style.visibility = "hidden";
-    E14.style.visibility = "hidden";
-    E15.style.visibility = "hidden";
-    E16.style.visibility = "hidden";
-    E17.style.visibility = "hidden";
-    E18.style.visibility = "hidden";
-    E19.style.visibility = "hidden";
-    E20.style.visibility = "hidden";
+  B1.style.backgroundColor = COL;
+  B3.style.backgroundColor = COL;
+  B4.style.backgroundColor = COL;
+  B5.style.backgroundColor = COL;
+  B6.style.backgroundColor = COL;
+  B7.style.backgroundColor = COL;
+  B8.style.backgroundColor = COL;
 
+  E1.style.backgroundColor = COL;
+  E2.style.backgroundColor = COL;
+  E3.style.backgroundColor = COL;
+  E4.style.backgroundColor = COL;
+  E5.style.backgroundColor = COL;
+  E6.style.backgroundColor = COL;
+  E7.style.backgroundColor = COL;
+  E8.style.backgroundColor = COL;
+  E9.style.backgroundColor = COL;
+  E10.style.backgroundColor = COL;
+  E11.style.backgroundColor = COL;
+  E12.style.backgroundColor = COL;
+  E13.style.backgroundColor = COL;
+  E14.style.backgroundColor = COL;
+  E15.style.backgroundColor = COL;
+  E16.style.backgroundColor = COL;
+  E17.style.backgroundColor = COL;
+  E18.style.backgroundColor = COL;
+  E19.style.backgroundColor = COL;
+  E20.style.backgroundColor = COL;
 }
